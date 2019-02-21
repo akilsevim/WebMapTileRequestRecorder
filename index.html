@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Recorder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        #container {
+            position: fixed;
+            right:10px;
+            top:10px;
+            height: 80%;
+            width: 20%;
+            padding: 15px;
+            box-sizing: content-box;
+            background-color: rgba(255,255,255,0.75);
+            z-index: 999;
+            overflow-x: scroll;
+            border:1px solid #000;
+        }
+        #container a, #container input {
+            display: block;
+            margin: 5px 0;
+
+        }
+        #requestedTiles b {
+            display: block;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <a id="dlLink" href="#" download="requests.json">Download Request Data (Json)</a><input type="text" id="filename" placeholder="file name" value="requests.json" />
+    <div id="requestedTiles"></div>
+</div>
+<div id="map"></div>
+<script src="./index.js"></script>
+</body>
+</html>
