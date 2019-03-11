@@ -7,9 +7,8 @@ import XYZ from 'ol/source/XYZ';
 import $ from "jquery";
 
 var XYZSource = new XYZ({
-        url: 'http://localhost:10000/dynamic/visualize.cgi/plots/CEMETERY_plot/tile-{z}-{x}-{y}.png',
-        tileSize: [256, 256],
-        wrapX: false,
+        url: 'http://ec2-13-52-80-164.us-west-1.compute.amazonaws.com/dynamic/visualize.cgi/ebd_plot/tile-{z}-{x}-{y}.png',
+        tileSize: [256, 256]
     });
 
 var requestsArray = {};
@@ -51,7 +50,7 @@ const map = new Map({
     layers: [
         new TileLayer({
             source: new OSM({
-                "url" : "http://{a-c}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+                "url" : "https://cartodb-basemaps-{a-c}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
             })
         }),
         new Tile({
